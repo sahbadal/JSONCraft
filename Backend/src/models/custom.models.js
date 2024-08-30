@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import faker from '@faker-js/faker';
+import {faker} from '@faker-js/faker';
 
 const customDataSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -52,4 +52,4 @@ customDataSchema.statics.generateFakeData = function (numberOfRecords) {
 
 const CustomData = mongoose.model('CustomData', customDataSchema);
 
-module.exports = CustomData;
+export default CustomData;

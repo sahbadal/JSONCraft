@@ -4,7 +4,7 @@ import {
   getCustomDataById,
   createCustomData,
   generateCustomData
-} from '../controllers/customController'; // Importing from customDataController.js
+} from '../controllers/customController.js'; // Importing from customDataController.js
 
 const router = express.Router();
 

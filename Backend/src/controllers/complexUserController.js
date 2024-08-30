@@ -1,4 +1,4 @@
-import User from '../models/complexUser.model.js';
+import ComplexUser from '../models/complexUser.models.js';
 
 // Get all users
 export const getAllUsers = async (req, res) => {

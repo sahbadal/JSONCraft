@@ -1,4 +1,4 @@
-import CustomData from '../models/customData.model.js';
+import CustomData from '../models/custom.models.js';
 
 // Get all custom data
 export const getAllCustomData = async (req, res) => {

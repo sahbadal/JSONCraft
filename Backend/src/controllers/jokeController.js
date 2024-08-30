@@ -1,4 +1,4 @@
-import Joke from '../models/joke.model.js';
+import Joke from '../models/joke.models.js';
 
 // Get all jokes
 export const getAllJokes = async (req, res) => {

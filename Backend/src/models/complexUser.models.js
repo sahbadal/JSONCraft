@@ -98,6 +98,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model('User', userSchema);
+const ComplexUser = mongoose.model('ComplexUser', userSchema);
 
-export default User;
+export default ComplexUser;
