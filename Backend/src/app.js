@@ -22,15 +22,15 @@ import errorRoutes from './routes/errorRoute.js';
 import customRoutes from './routes/customRoute.js';
 import todoRoutes from './routes/todoRoute.js';
 
-app.use('/posts', postRoutes);
-app.use('/products', productRoutes);
-app.use('/jokes', jokeRoutes);
-app.use('/quotes', quoteRoutes);
-app.use('/complex-users', complexUserRoutes);
-app.use('/users', userRoutes);
-app.use('/errors', errorRoutes);
-app.use('/custom', customRoutes);
-app.use('/todos', todoRoutes);
+app.use('/api/v1/posts', postRoutes);
+app.use('/api/v1/products', productRoutes);
+app.use('/api/v1/jokes', jokeRoutes);
+app.use('/api/v1/quotes', quoteRoutes);
+app.use('/api/v1/complex-users', complexUserRoutes);
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/errors', errorRoutes);
+app.use('/api/v1/custom', customRoutes);
+app.use('/api/v1/todos', todoRoutes);
 
 
 export default app;

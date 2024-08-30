@@ -10,18 +10,18 @@ import {
 const router = express.Router();
 
 // Route to get all posts
-router.get('/posts', getAllPosts);
+router.get('/listPosts', getAllPosts);
 
 // Route to get a post by ID
-router.get('/posts/:id', getPostById);
+router.get('/listPosts/:id', getPostById);
 
 // Route to create a new post
-router.post('/posts', createPost);
+router.post('/createPosts', createPost);
 
 // Route to update a post by ID
-router.put('/posts/:id', updatePost);
+router.put('/updatePosts/:id', updatePost);
 
 // Route to delete a post by ID
-router.delete('/posts/:id', deletePost);
+router.delete('/deletePosts/:id', deletePost);
 
 export default router;
