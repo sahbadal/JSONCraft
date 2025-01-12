@@ -12,7 +12,7 @@ connectDB()
       console.log(`Server running on http://localhost:${PORT}`);
     });
   })
-  .catch((err)=>{
+  .catch((err) => {
     console.log(`Error While connecting to Database ${err.message}`)
   })
 
