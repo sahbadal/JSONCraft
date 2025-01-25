@@ -16,7 +16,7 @@ router.get('/listProducts', getAllProducts);
 router.get('/listProducts/:id', getProductById);
 
 // Route to create a new product
-router.post('/create', createProduct);
+router.post('/createProducts', createProduct);
 
 // Route to update a product by ID
 router.put('/update/:id', updateProduct);
