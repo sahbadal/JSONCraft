@@ -10,13 +10,13 @@ import {
 const router = express.Router();
 
 // Route to get all quotes
-router.get('/quotes', getAllQuotes);
+router.get('/listQuotes', getAllQuotes);
 
 // Route to get a quote by ID
-router.get('/quotes/:id', getQuoteById);
+router.get('/listQuotes/:id', getQuoteById);
 
 // Route to create a new quote
-router.post('/quotes', createQuote);
+router.post('/createQuotes', createQuote);
 
 // Route to update a quote by ID
 router.put('/quotes/:id', updateQuote);

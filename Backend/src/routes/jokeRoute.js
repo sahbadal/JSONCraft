@@ -9,13 +9,13 @@ import {
 const router = express.Router();
 
 // Route to get all jokes
-router.get('/jokes', getAllJokes);
+router.get('/listJokes', getAllJokes);
 
 // Route to get a joke by ID
-router.get('/jokes/:id', getJokeById);
+router.get('/listJokes/:id', getJokeById);
 
 // Route to create a new joke
-router.post('/jokes', createJoke);
+router.post('/createJokes', createJoke);
 
 // Route to delete a joke by ID
 router.delete('/jokes/:id', deleteJoke);

@@ -11,9 +11,10 @@ import Jokes from './pages/Jokes';
 import Quotes from './pages/Quotes';
 import ComplexUsers from './pages/ComplexUsers';
 import Users from './pages/Users';
-import Errors from './pages/Errors';
 import Custom from './pages/Custom';
 import Todos from './pages/Todos';
+import Docs from './pages/Docs';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -31,9 +32,10 @@ const App = () => {
               <Route path="/quotes" element={<Quotes />} />
               <Route path="/complex-users" element={<ComplexUsers />} />
               <Route path="/users" element={<Users />} />
-              <Route path="/errors" element={<Errors />} />
               <Route path="/custom" element={<Custom />} />
               <Route path="/todos" element={<Todos />} />
+              <Route path="/docs" element={<Docs />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </MainContent>
         </div>

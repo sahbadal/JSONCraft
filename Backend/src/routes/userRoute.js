@@ -10,10 +10,10 @@ import {
 const router = express.Router();
 
 // Route to get all users
-router.get('/users', getAllUsers);
+router.get('/listUsers', getAllUsers);
 
 // Route to get a user by ID
-router.get('/users/:id', getUserById);
+router.get('/listUsers/:id', getUserById);
 
 // Route to create a new user
 router.post('/createUsers', createUser);

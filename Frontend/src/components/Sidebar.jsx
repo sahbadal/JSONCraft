@@ -9,7 +9,6 @@ const Sidebar = () => {
         { name: 'Quotes', path: '/quotes' },
         { name: 'Complex Users', path: '/complex-users' },
         { name: 'Users', path: '/users' },
-        { name: 'Errors', path: '/errors' },
         { name: 'Custom', path: '/custom' },
         { name: 'Todos', path: '/todos' },
     ];

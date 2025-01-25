@@ -1,4 +1,5 @@
 import Post from '../models/post.models.js';
+import mongoose from 'mongoose';
 
 // Get all posts
 export const getAllPosts = async (req, res) => {
@@ -14,7 +15,8 @@ export const getAllPosts = async (req, res) => {
 export const getPostById = async (req, res) => {
   const { id } = req.params;
   try {
-    const post = await Post.findById(id);
+    const postId = new mongoose.Types.ObjectId(id);
+    const post = await Post.findById(postId);
     if (!post) return res.status(404).json({ message: 'Post not found' });
     res.status(200).json(post);
   } catch (error) {

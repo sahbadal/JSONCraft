@@ -10,10 +10,10 @@ import {
 const router = express.Router();
 
 // Route to get all todos
-router.get('/todos', getAllTodos);
+router.get('/listTodos', getAllTodos);
 
 // Route to get a todo by ID
-router.get('/todos/:id', getTodoById);
+router.get('/listTodos/:id', getTodoById);
 
 // Route to create a new todo
 router.post('/todos', createTodo);
