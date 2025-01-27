@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Docs = () => {
     const endpoints = [
-        { name: "Posts", path: "http://localhost:5000/api/v1/listPosts" },
-        { name: "Products", path: "http://localhost:5000/api/v1/listProducts" },
-        { name: "Jokes", path: "http://localhost:5000/api/v1/listJokes" },
-        { name: "Quotes", path: "http://localhost:5000/api/v1/listQuotes" },
-        { name: "Complex Users", path: "http://localhost:5000/api/v1/listComplexUsers" },
-        { name: "Users", path: "http://localhost:5000/api/v1/listUsers" },
-        { name: "Todos", path: "http://localhost:5000/api/v1/listTodos" },
+        { name: "Posts", path: "https://jsoncraft.onrender.com/api/v1/listPosts" },
+        { name: "Products", path: "https://jsoncraft.onrender.com/api/v1/listProducts" },
+        { name: "Jokes", path: "https://jsoncraft.onrender.com/api/v1/listJokes" },
+        { name: "Quotes", path: "https://jsoncraft.onrender.com/api/v1/listQuotes" },
+        { name: "Complex Users", path: "https://jsoncraft.onrender.com/api/v1/listComplexUsers" },
+        { name: "Users", path: "https://jsoncraft.onrender.com/api/v1/listUsers" },
+        { name: "Todos", path: "https://jsoncraft.onrender.com/api/v1/listTodos" },
     ];
 
     return (
@@ -47,7 +47,7 @@ const Docs = () => {
                     Use the <code>fetch</code> method to retrieve data from any endpoint. Here's an example:
                 </p>
                 <pre className="bg-gray-800 p-4 rounded-md text-sm text-white overflow-x-auto mt-4">
-                    {`fetch('http://localhost:5000/api/v1/listPosts')
+                    {`fetch('https://jsoncraft.onrender.com/api/v1/listPosts')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));`}
