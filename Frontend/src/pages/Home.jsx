@@ -2,9 +2,9 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className="bg-gray-900 p-8 rounded-lg shadow-lg text-white font-mono">
-            <h2 className="text-4xl font-bold text-blue-500 mb-4">Welcome to jsonCraft</h2>
-            <p className="text-gray-400 mb-6 text-lg">Your go-to platform for working with JSON APIs. Whether you're testing, simulating errors, or managing complex data, jsonCraft has you covered.</p>
+        <div className="bg-white p-8 rounded-lg shadow-lg text-white font-mono">
+            <h2 className="text-3xl font-bold text-blue-500 mb-4">Welcome to JsonCraft</h2>
+            <p className="text-gray-700 mb-6 ">Your go-to platform for working with JSON APIs. Whether you're testing, simulating errors, or managing complex data, jsonCraft has you covered.</p>
 
             {/* Introduction Section */}
             <div className="bg-gray-800 p-6 rounded-lg mb-8">

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const links = [
+        { name: 'Custom', path: '/custom' },
         { name: 'Posts', path: '/posts' },
         { name: 'Products', path: '/products' },
         { name: 'Jokes', path: '/jokes' },
         { name: 'Quotes', path: '/quotes' },
         { name: 'Complex Users', path: '/complex-users' },
         { name: 'Users', path: '/users' },
-        { name: 'Custom', path: '/custom' },
         { name: 'Todos', path: '/todos' },
     ];
 
@@ -20,7 +20,7 @@ const Sidebar = () => {
                     <li key={link.name}>
                         <Link
                             to={link.path}
-                            className="block px-4 py-2 rounded hover:bg-gray-100 hover:text-blue-600"
+                            className="block font-semibold px-4 py-2 rounded hover:bg-gray-100 hover:text-blue-600"
                         >
                             {link.name}
                         </Link>

@@ -21,6 +21,7 @@ import userRoutes from './routes/userRoute.js';
 import errorRoutes from './routes/errorRoute.js';
 import customRoutes from './routes/customRoute.js';
 import todoRoutes from './routes/todoRoute.js';
+import feedbackRoute from './routes/feedbackRoute.js';
 
 app.use('/api/v1', postRoutes);
 app.use('/api/v1', productRoutes);
@@ -31,6 +32,7 @@ app.use('/api/v1', userRoutes);
 app.use('/api/v1', errorRoutes);
 app.use('/api/v1', customRoutes);
 app.use('/api/v1', todoRoutes);
+app.use('/api/v1', feedbackRoute);
 
 
 export default app;

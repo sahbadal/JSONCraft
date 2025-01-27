@@ -14,7 +14,6 @@ import Users from './pages/Users';
 import Custom from './pages/Custom';
 import Todos from './pages/Todos';
 import Docs from './pages/Docs';
-import About from './pages/About';
 
 const App = () => {
   return (
@@ -35,7 +34,6 @@ const App = () => {
               <Route path="/custom" element={<Custom />} />
               <Route path="/todos" element={<Todos />} />
               <Route path="/docs" element={<Docs />} />
-              <Route path="/about" element={<About />} />
             </Routes>
           </MainContent>
         </div>

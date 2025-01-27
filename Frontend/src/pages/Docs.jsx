@@ -1,84 +1,75 @@
-// src/pages/Docs.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Docs = () => {
+    const endpoints = [
+        { name: "Posts", path: "http://localhost:5000/api/v1/listPosts" },
+        { name: "Products", path: "http://localhost:5000/api/v1/listProducts" },
+        { name: "Jokes", path: "http://localhost:5000/api/v1/listJokes" },
+        { name: "Quotes", path: "http://localhost:5000/api/v1/listQuotes" },
+        { name: "Complex Users", path: "http://localhost:5000/api/v1/listComplexUsers" },
+        { name: "Users", path: "http://localhost:5000/api/v1/listUsers" },
+        { name: "Todos", path: "http://localhost:5000/api/v1/listTodos" },
+    ];
+
     return (
         <div className="bg-white p-6 rounded shadow">
             <h2 className="text-3xl font-bold text-blue-600">Documentation</h2>
-            <p className="text-gray-700 mt-4">
-                Welcome to the jsonCraft API documentation! This guide will help you understand how to interact with the API and use its features effectively.
+            <p className="text-gray-700 mt-4 mb-6">
+                Welcome to the <strong>jsonCraft</strong> documentation! Learn how to use our API endpoints and create custom JSON objects with ease.
             </p>
+
+            {/* Endpoints Section */}
             <div className="mt-6">
-                <h3 className="text-2xl font-semibold text-blue-500">Getting Started</h3>
+                <h3 className="text-2xl font-semibold text-blue-500">API Endpoints</h3>
                 <p className="text-gray-600 mt-2">
-                    jsonCraft offers a set of powerful API endpoints that allow you to easily manage and interact with JSON data. You can use it to create, read, update, and delete resources like users, products, and much more.
+                    All endpoints. You can click on the links below to view their corresponding JSON responses:
                 </p>
-                <p className="text-gray-600 mt-2">
-                    To get started, you will need to set up your environment and have an API endpoint URL ready to interact with.
-                </p>
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Installation</h4>
-                <pre className="bg-gray-700 p-4 rounded-md text-white mt-2">
-                    {`# Clone the repository
-git clone https://github.com/your-username/jsoncraft.git
-
-# Install dependencies
-npm install
-
-# Start the server
-npm start`}
-                </pre>
-
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">API Endpoints</h4>
-                <p className="text-gray-600 mt-2">
-                    jsonCraft provides several endpoints for managing different resources. Here’s a quick overview:
-                </p>
-                <ul className="list-disc pl-6">
-                    <li><strong>/api/v1/listUsers</strong>: Fetch all users</li>
-                    <li><strong>/api/v1/listProducts</strong>: Fetch all products</li>
-                    <li><strong>/api/v1/listJokes</strong>: Fetch jokes</li>
-                    <li><strong>/api/v1/listQuotes</strong>: Fetch motivational quotes</li>
-                    <li><strong>/api/v1/simulate-error/:type</strong>: Simulate various errors for testing</li>
+                <ul className="list-disc pl-6 mt-4 space-y-2">
+                    {endpoints.map((endpoint, index) => (
+                        <li key={index}>
+                            <Link
+                                to={endpoint.path}
+                                target="_blank"
+                                className="text-blue-600 underline"
+                            >
+                                {endpoint.name}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
+            </div>
 
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Example Request</h4>
+            {/* How to Fetch Data */}
+            <div className="mt-6">
+                <h3 className="text-2xl font-semibold text-blue-500">How to Fetch Data</h3>
                 <p className="text-gray-600 mt-2">
-                    Here’s an example of how you can fetch all users from the API:
+                    Use the <code>fetch</code> method to retrieve data from any endpoint. Here's an example:
                 </p>
-                <pre className="bg-gray-700 p-4 rounded-md text-white mt-2">
-                    {`fetch('http://localhost:5000/api/v1/listUsers')
+                <pre className="bg-gray-800 p-4 rounded-md text-sm text-white overflow-x-auto mt-4">
+                    {`fetch('http://localhost:5000/api/v1/listPosts')
   .then(response => response.json())
-  .then(data => console.log(data))`}
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));`}
                 </pre>
+            </div>
 
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Error Handling</h4>
+            {/* Custom JSON Creator Section */}
+            <div className="mt-6">
+                <h3 className="text-2xl font-semibold text-blue-500">Custom JSON Creator</h3>
                 <p className="text-gray-600 mt-2">
-                    jsonCraft also supports error simulation. Use the <strong>/simulate-error/:type</strong> endpoint to test various types of errors:
+                    Our platform includes a powerful custom JSON creation tool. Here's how you can use it:
                 </p>
-                <ul className="list-disc pl-6">
-                    <li><strong>404</strong>: Resource not found</li>
-                    <li><strong>500</strong>: Internal server error</li>
-                    <li><strong>403</strong>: Forbidden access</li>
-                    <li><strong>400</strong>: Bad request</li>
-                </ul>
-
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Example Error Request</h4>
-                <p className="text-gray-600 mt-2">
-                    To simulate a 404 error, make a GET request to:
-                </p>
-                <pre className="bg-gray-700 p-4 rounded-md text-white mt-2">
-                    {`fetch('http://localhost:5000/api/v1/simulate-error/404')
-  .then(response => response.json())
-  .then(data => console.log(data))`}
-                </pre>
-
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Authentication</h4>
-                <p className="text-gray-600 mt-2">
-                    jsonCraft does not currently require authentication for using the APIs. However, we plan to implement user authentication in future updates for secure access to certain endpoints.
-                </p>
-
-                <h4 className="text-xl font-semibold text-blue-500 mt-4">Contact</h4>
-                <p className="text-gray-600 mt-2">
-                    If you have any questions or need support, feel free to contact us at <strong>support@jsoncraft.com</strong>.
+                <ol className="list-none pl-6 mt-4 text-gray-700 space-y-2">
+                    <li><strong>Step 1:</strong> Click the "Add Field" button to add a new field.</li>
+                    <li><strong>Step 2:</strong> Enter a <strong>Key</strong> (e.g., "name", "age") and select its <strong>Type</strong> (e.g., Text, Number, Boolean).</li>
+                    <li><strong>Step 3:</strong> Enter a value for the field. For arrays, select "Array" and add values using the "Add to Array" button.</li>
+                    <li><strong>Step 4:</strong> Add or remove fields as needed. Use the "Remove" button to delete any unwanted fields.</li>
+                    <li><strong>Step 5:</strong> Click "Generate JSON" to see your custom JSON object.</li>
+                    <li><strong>Step 6:</strong> Use the copy icon to copy the generated JSON to your clipboard.</li>
+                </ol>
+                <p className="text-gray-600 mt-4">
+                    The generated JSON can be used in your applications for various purposes, including API requests, data storage, and testing.
                 </p>
             </div>
         </div>

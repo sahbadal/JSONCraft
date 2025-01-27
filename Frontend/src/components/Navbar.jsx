@@ -9,11 +9,11 @@ const Navbar = () => {
                     JsonCraft
                 </Link>
                 <nav className="flex space-x-4">
-                    <Link to="/docs" className="text-gray-600 hover:text-blue-600">
-                        Documentation
+                    <Link to="/" className="font-semibold text-gray-700 hover:text-blue-600">
+                        Home
                     </Link>
-                    <Link to="/about" className="text-gray-600 hover:text-blue-600">
-                        About Us
+                    <Link to="/docs" className="font-semibold text-gray-700 hover:text-blue-600">
+                        Documentation
                     </Link>
                 </nav>
             </div>
