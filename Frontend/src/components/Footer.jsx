@@ -15,7 +15,7 @@ const Footer = () => {
         const feedbackData = { name, email, message };
 
         try {
-            const response = await fetch('http://localhost:5000/api/v1/feedback', {
+            const response = await fetch('https://jsoncraft.onrender.com/api/v1/feedback', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
