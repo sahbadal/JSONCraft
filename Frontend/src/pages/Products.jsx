@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Products = () => {
-    const [url, setUrl] = useState('http://localhost:5000/api/v1/listProducts/6794add0ba66a9df497582b9'); // Default URL for product
+    const [url, setUrl] = useState('https://jsoncraft.onrender.com/api/v1/listProducts/6794add0ba66a9df497582b9'); // Default URL for product
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -37,7 +37,7 @@ const Products = () => {
             <div className="bg-gray-800 p-4 rounded-md mb-6">
                 <h3 className="text-xl font-semibold text-blue-500 mb-2">Example Fetch Code:</h3>
                 <pre className="bg-gray-700 p-4 rounded-md text-sm overflow-x-auto">
-                    {`fetch('http://localhost:5000/api/v1/listProducts')
+                    {`fetch('https://jsoncraft.onrender.com/api/v1/listProducts')
   .then(response => response.json())
   .then(json => console.log(json))`}
                 </pre>
